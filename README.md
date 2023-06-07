@@ -1,2 +1,2 @@
 # ProEventos
- Repositorio criado para estudos.
+ Repositório criado para estudos.
