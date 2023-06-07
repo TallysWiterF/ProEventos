@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JWkBw7ZO9Dxna5j9NSo0yHSy4CksGsGELNIOTm4uUT06eBcWriFRQGBkMN+pckIBX8l2/P6LUi1+6AeuQDkN0g==",
+  "dgSpecHash": "Vo9s+sk2l7QfxN79kkb3bdKZb5vRVU8yhD5r0oznum+rOVkm/Mj0+YfAb4Qxy1kpb1SplbL9bmDktL5nxsVclA==",
   "success": true,
-  "projectFilePath": "C:\\Curso_FullStackAngular\\ProEventos.API\\ProEventos.API\\ProEventos.API\\ProEventos.API.csproj",
+  "projectFilePath": "C:\\Curso_FullStackAngular\\ProEventos.API\\ProEventos\\ProEventos.API\\ProEventos.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WazPc\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\WazPc\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

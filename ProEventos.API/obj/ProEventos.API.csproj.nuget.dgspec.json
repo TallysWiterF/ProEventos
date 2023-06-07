@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Curso_FullStackAngular\\ProEventos.API\\ProEventos.API\\ProEventos.API\\ProEventos.API.csproj": {}
+    "C:\\Curso_FullStackAngular\\ProEventos.API\\ProEventos\\ProEventos.API\\ProEventos.API.csproj": {}
   },
   "projects": {
-    "C:\\Curso_FullStackAngular\\ProEventos.API\\ProEventos.API\\ProEventos.API\\ProEventos.API.csproj": {
+    "C:\\Curso_FullStackAngular\\ProEventos.API\\ProEventos\\ProEventos.API\\ProEventos.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Curso_FullStackAngular\\ProEventos.API\\ProEventos.API\\ProEventos.API\\ProEventos.API.csproj",
+        "projectUniqueName": "C:\\Curso_FullStackAngular\\ProEventos.API\\ProEventos\\ProEventos.API\\ProEventos.API.csproj",
         "projectName": "ProEventos.API",
-        "projectPath": "C:\\Curso_FullStackAngular\\ProEventos.API\\ProEventos.API\\ProEventos.API\\ProEventos.API.csproj",
+        "projectPath": "C:\\Curso_FullStackAngular\\ProEventos.API\\ProEventos\\ProEventos.API\\ProEventos.API.csproj",
         "packagesPath": "C:\\Users\\WazPc\\.nuget\\packages\\",
-        "outputPath": "C:\\Curso_FullStackAngular\\ProEventos.API\\ProEventos.API\\ProEventos.API\\obj\\",
+        "outputPath": "C:\\Curso_FullStackAngular\\ProEventos.API\\ProEventos\\ProEventos.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
