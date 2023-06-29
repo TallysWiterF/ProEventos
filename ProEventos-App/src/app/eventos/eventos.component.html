@@ -1,16 +1,26 @@
 <h2>Eventos</h2>
 <hr />
-<form class="form-inline">
+<div class="form-inline">
   <div class="form-group mb-2">
-    <input type="text" class="form-control mr-2" placeholder="Buscar">
-    <button class="btn btn-outline-success">Buscar</button>
+    <label class="mr-2">Filtro:</label>
+    <input
+    type="text"
+    class="form-control mr-2"
+    placeholder="Buscar"
+    [(ngModel)]="filtroLista">
   </div>
-</form>
+</div>
+
 <table class="table table-striped">
   <thead class="thead-dark">
     <tr>
+      <th>
+        <button type="button" class="btn btn-outline-light btn-sm"
+        tooltip="{{exibirImagem ? 'Visualizar Imagens' : 'Ocultar Imagens' }}"
+        (click)="alterarImagem()">
+        {{exibirImagem ? 'Exibir' : 'Ocultar' }}</button>
+      </th>
       <th>#</th>
-      <th><button class="btn btn-light">Imagem</button></th>
       <th>Tema</th>
       <th>Local</th>
       <th>Data</th>
@@ -20,19 +30,24 @@
     </tr>
   </thead>
   <tbody *ngIf="eventos && eventos.length">
-    <tr *ngFor="let evento of eventos">
-      <td>{{evento.eventoId}}</td>
-      <td> <img src="/assets/{{evento.imagemURL}}"
-        [style.width.px]="widthImg"
-        [style.margin.px]="marginImg"
-        >
+    <tr *ngFor="let evento of eventosFiltrados">
+      <td>
+        <img [collapse]="exibirImagem"
+        [isAnimated]="true"
+        src="/assets/{{evento.imagemURL}}"
+        [style.width.px]="larguraImagem"
+        [style.margin.px]="margemImagem">
       </td>
+      <td>{{evento.eventoId}}</td>
       <td>{{evento.tema}}</td>
       <td>{{evento.local}}</td>
       <td>{{evento.dataEvento}}</td>
       <td>{{evento.qtdPessoas}}</td>
       <td>{{evento.lote}}</td>
-      <td></td>
+      <td>
+        <button type="button" class="btn btn-primary btn-sm mr-2">Editar</button>
+        <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+      </td>
     </tr>
   </tbody>
   <tfoot *ngIf="!eventos.length">
