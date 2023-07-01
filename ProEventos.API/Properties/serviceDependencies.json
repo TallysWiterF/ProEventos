@@ -5,8 +5,7 @@
     },
     "sqlite1": {
       "type": "sqlite",
-      "connectionId": "ConnectionStrings:ProEventosConnectionString",
-      "dynamicId": null
+      "connectionId": "ProEventosConnectionString"
     }
   }
 }
