@@ -498,3 +498,12 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+b.MigrationsAssembly(ProEventos.Persistence))
+*.v2
+*.v1
+ProEventos.API/migration_script.sql
+ProEventos.Persistence/Properties/serviceDependencies.json
+ProEventos.Persistence/Properties/serviceDependencies.local.json
+*.db
+.vs/ProjectEvaluation/proeventos.api.projects.v2
+.vs/ProjectEvaluation/proeventos.api.metadata.v2
