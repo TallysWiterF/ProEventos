@@ -507,3 +507,11 @@ ProEventos.Persistence/Properties/serviceDependencies.local.json
 *.db
 .vs/ProjectEvaluation/proeventos.api.projects.v2
 .vs/ProjectEvaluation/proeventos.api.metadata.v2
+ProEventos.API/.config/dotnet-tools.json
+ProEventos.API/Data/SQlLiteDatabase.db-shm
+ProEventos.API/Data/SQlLiteDatabase.db-wal
+.vs/ProEventos.API/DesignTimeBuild/.dtbcache.v2
+*.v2
+*.v1
+*.v2
+*.v2

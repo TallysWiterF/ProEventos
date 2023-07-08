@@ -10,7 +10,7 @@ public class Evento
     public string ImagemURL { get; set; } = string.Empty;
     public string Telefone { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
-    public IEnumerable<Lote> Lotes { get; set; } = Enumerable.Empty<Lote>();
-    public IEnumerable<RedeSocial> RedesSociais { get; set; } = Enumerable.Empty<RedeSocial>();
-    public IEnumerable<PalestranteEvento> PalestrantesEventos { get; set; } = Enumerable.Empty<PalestranteEvento>();
+    public IEnumerable<Lote>? Lotes { get; set; } 
+    public IEnumerable<RedeSocial>? RedesSociais { get; set; } 
+    public IEnumerable<PalestranteEvento>? PalestrantesEventos { get; set; }
 }

@@ -5,7 +5,7 @@ public class RedeSocial
     public string Nome { get; set; } = string.Empty;
     public string URL { get; set; } = string.Empty;
     public int EventoId { get; set; }
-    public Evento Evento { get; set; } = new Evento();
+    public Evento? Evento { get; set; }
     public int? PalestranteId { get; set; }
-    public Palestrante Palestrante { get; set; } = new Palestrante();
+    public Palestrante? Palestrante { get; set; }
 }

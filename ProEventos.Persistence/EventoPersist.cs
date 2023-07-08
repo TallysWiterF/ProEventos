@@ -9,7 +9,11 @@ public class EventoPersist : IEventoPersist
 {
     private readonly ProEventosContext _context;
 
-    public EventoPersist(ProEventosContext context) => _context = context;
+    public EventoPersist(ProEventosContext context)
+    {
+        _context = context;
+        _context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+    }
 
     public async Task<Evento[]> GetAllEventosAsync(bool includePalestrantes = false)
     {

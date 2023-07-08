@@ -8,7 +8,7 @@ public class Palestrante
     public string ImagemURL { get; set; } = string.Empty;
     public string Telefone { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
-    public IEnumerable<RedeSocial> RedesSocials { get; set; } = Enumerable.Empty<RedeSocial>();
-    public IEnumerable<PalestranteEvento> PalestrantesEventos { get; set; } = Enumerable.Empty<PalestranteEvento>();
+    public IEnumerable<RedeSocial>? RedesSocials { get; set; }
+    public IEnumerable<PalestranteEvento>? PalestrantesEventos { get; set; }
 }
 
