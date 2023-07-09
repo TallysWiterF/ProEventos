@@ -16,6 +16,16 @@ public class ProEventosContext : DbContext
     {
         modelBuilder.Entity<PalestranteEvento>()
             .HasKey(PE => new { PE.EventoId, PE.PalestranteId });
+
+        modelBuilder.Entity<Evento>()
+            .HasMany(e => e.RedesSociais)
+            .WithOne(rs => rs.Evento)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Palestrante>()
+            .HasMany(p => p.RedesSociais)
+            .WithOne(rs => rs.Palestrante)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }
 

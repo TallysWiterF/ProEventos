@@ -17,7 +17,7 @@ public class PalestrantePersist : IPalestrantePersist
 
     public async Task<Palestrante[]> GetAllPalestrantesAsync(bool includeEventos = false)
     {
-        IQueryable<Palestrante> query = _context.Palestrantes.Include(p => p.RedesSocials);
+        IQueryable<Palestrante> query = _context.Palestrantes.Include(p => p.RedesSociais);
 
         if (includeEventos)
             query = query.Include(p => p.PalestrantesEventos).ThenInclude(pe => pe.Evento);
@@ -29,7 +29,7 @@ public class PalestrantePersist : IPalestrantePersist
 
     public async Task<Palestrante[]> GetAllPalestrantesByNomeAsync(string nome, bool includeEventos = false)
     {
-        IQueryable<Palestrante> query = _context.Palestrantes.Include(p => p.RedesSocials);
+        IQueryable<Palestrante> query = _context.Palestrantes.Include(p => p.RedesSociais);
 
         if (includeEventos)
             query = query.Include(p => p.PalestrantesEventos).ThenInclude(pe => pe.Evento);
@@ -41,7 +41,7 @@ public class PalestrantePersist : IPalestrantePersist
 
     public async Task<Palestrante> GetPalestranteByIdAsync(int palestranteId, bool includeEventos = false)
     {
-        IQueryable<Palestrante> query = _context.Palestrantes.Include(p => p.RedesSocials);
+        IQueryable<Palestrante> query = _context.Palestrantes.Include(p => p.RedesSociais);
 
         if (includeEventos)
             query = query.Include(p => p.PalestrantesEventos).ThenInclude(pe => pe.Evento);
