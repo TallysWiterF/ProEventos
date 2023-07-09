@@ -18,6 +18,7 @@
         <button type="button" class="btn btn-outline-light btn-sm"
         tooltip="{{exibirImagem ? 'Visualizar Imagens' : 'Ocultar Imagens' }}"
         (click)="alterarImagem()">
+        <i class="{{exibirImagem ? 'fa fa-eye' : 'fa fa-eye-slash' }}"></i>
         {{exibirImagem ? 'Exibir' : 'Ocultar' }}</button>
       </th>
       <th>#</th>
@@ -38,15 +39,20 @@
         [style.width.px]="larguraImagem"
         [style.margin.px]="margemImagem">
       </td>
-      <td>{{evento.eventoId}}</td>
+      <td>{{evento.id}}</td>
       <td>{{evento.tema}}</td>
       <td>{{evento.local}}</td>
-      <td>{{evento.dataEvento}}</td>
+      <td>{{evento.dataEvento | DateTimeFormat }}</td>
       <td>{{evento.qtdPessoas}}</td>
-      <td>{{evento.lote}}</td>
+      <td> <div *ngIf="evento.lotes.length">{{evento.lotes[0].nome}} </div>
+      </td>
       <td>
-        <button type="button" class="btn btn-primary btn-sm mr-2">Editar</button>
-        <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+        <button type="button" class="btn btn-primary btn-sm mr-2" tooltip="Editar">
+          <i class="fa fa-edit"></i>
+        </button>
+        <button type="button" class="btn btn-danger btn-sm" tooltip="Deletar">
+          <i class="fa fa-trash"></i>
+        </button>
       </td>
     </tr>
   </tbody>

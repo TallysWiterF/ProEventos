@@ -1,4 +1,4 @@
-import { ILote } from "./Lote";
+import { Lote } from "./Lote";
 import { RedeSocial } from "./RedeSocial";
 import { Palestrante } from "./Palestrante";
 
@@ -11,7 +11,7 @@ export interface Evento {
   imagemURL: string;
   telefone: string;
   email: string;
-  lotes: ILote[];
+  lotes: Lote[];
   redesSociais: RedeSocial[];
   palestrantesEventos: Palestrante[];
 }
