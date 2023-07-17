@@ -3,6 +3,7 @@ import { EventoService } from '../services/evento.service';
 import { Evento } from '../models/Evento';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ToastrService } from 'ngx-toastr';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-eventos',
@@ -41,10 +42,15 @@ export class EventosComponent implements OnInit {
 
   constructor(private eventoService: EventoService,
     private modalService: BsModalService,
-    private toastr: ToastrService) { }
+    private toastr: ToastrService,
+    private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
+
+    this.spinner.show();
     this.getEventos();
+    setTimeout(() => {
+    }, 1000);
   }
 
   public alterarImagem(): void {
@@ -57,7 +63,11 @@ export class EventosComponent implements OnInit {
         this.eventos = eventos;
         this.eventosFiltrados = this.eventos;
       },
-      error: (error: any) => console.log(error)
+      error: (error: any) => {
+        this.spinner.hide();
+        this.toastr.error('Falha ao carregar os Eventos.', 'Erro!')
+      },
+      complete: () => this.spinner.hide()
     });
   }
 
