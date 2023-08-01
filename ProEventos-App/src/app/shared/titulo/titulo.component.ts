@@ -10,7 +10,7 @@ export class TituloComponent implements OnInit {
 
   @Input() titulo?: string;
   @Input() iconClass: string = 'fa fa-circle-xmark';
-  @Input() subtitulo: string = 'Desde 2023';
+  @Input() subtitulo?: string;
   @Input() utilizaLista: boolean = false;
 
   constructor(private router: Router) { }
