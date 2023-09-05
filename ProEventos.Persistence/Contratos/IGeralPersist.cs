@@ -1,6 +1,4 @@
-﻿using ProEventos.Domain;
-
-namespace ProEventos.Persistence.Contratos;
+﻿namespace ProEventos.Persistence.Contratos;
 
 public interface IGeralPersist
 {

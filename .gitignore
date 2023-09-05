@@ -515,3 +515,6 @@ ProEventos.API/Data/SQlLiteDatabase.db-wal
 *.v1
 *.v2
 *.v2
+*.v2
+*.v1
+.vs/ProEventos.API/v17/.suo

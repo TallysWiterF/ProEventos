@@ -103,7 +103,7 @@ namespace ProEventos.API.Controllers
         {
             try
             {
-                return await _eventoService.DeleteEvento(id) ? 
+                return await _eventoService.DeleteEvento(id) ?
                     Ok("Evento deletado.") : BadRequest("Ocorreu um erro ao deletar o evento");
             }
             catch (Exception ex)

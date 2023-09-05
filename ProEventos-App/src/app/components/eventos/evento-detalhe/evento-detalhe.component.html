@@ -1,46 +1,79 @@
 <div class="card rounded shadow-sm">
-  <form>
+  <form [formGroup]="form">
     <div class="p-3">
       <div class="form-row">
         <div class="form-group col-md-12">
           <label>Tema</label>
-          <input type="text" class="form-control" placeholder="Insira o Tema">
+          <input type="text" class="form-control"
+          [ngClass]="{'is-invalid': controls.tema.errors && controls.tema.touched }"
+          formControlName="tema" placeholder="Insira o Tema">
+          <div *ngIf="controls.tema.errors?.required" class="invalid-feedback">
+            Tema é obrigatório.
+          </div>
+          <div *ngIf="controls.tema.errors?.minlength" class="invalid-feedback">
+            Tema deve ter no mínimo 4 caracteres.
+          </div>
+          <div *ngIf="controls.tema.errors?.maxlength" class="invalid-feedback">
+            Tema deve ter no máximo 50 caracteres.
+          </div>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-8">
           <label>Local</label>
-          <input type="text" class="form-control" placeholder="">
+          <input type="text" class="form-control is-invalid" formControlName="local" placeholder="">
+          <div class="invalid-feedback">
+            Local é obrigatório!
+          </div>
         </div>
         <div class="form-group col-md-4">
           <label>Data e Hora</label>
-          <input type="datetime" class="form-control" placeholder="">
+          <input type="datetime" class="form-control is-invalid" formControlName="dataEvento" placeholder="">
+          <div class="invalid-feedback">
+            Data e Hora são obrigatórios!
+          </div>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-2">
           <label>Quantidade Pessoas</label>
-          <input type="text" class="form-control" placeholder="">
+          <input type="text" class="form-control is-invalid" formControlName="qtdPessoas" placeholder="">
+          <div class="invalid-feedback">
+            Quantidade Pessoas é obrigatório!
+          </div>
+        </div>
+        <div class="form-group col-md-2">
+          <label>Telefone</label>
+          <input type="text" class="form-control is-invalid" formControlName="telefone" placeholder="(000) 90000-0000">
+          <div class="invalid-feedback">
+            Telefone é obrigatório!
+          </div>
         </div>
         <div class="form-group col-md-4">
-          <label>Telefone</label>
-          <input type="text" class="form-control" placeholder="(000) 90000-0000">
+          <label>E-mail</label>
+          <input type="text" class="form-control is-invalid" formControlName="email" placeholder="E-mail">
+          <div class="invalid-feedback">
+            E-mail é obrigatório!
+          </div>
         </div>
-        <div class="form-group col-md-6">
-          <label>Email</label>
-          <input type="text" class="form-control" placeholder="e-mail">
+        <div class="form-group col-md-4">
+          <label>Imagem</label>
+          <input type="text" class="form-control is-invalid" formControlName="imagemURL" placeholder="Imagem">
+          <div class="invalid-feedback">
+            Imagem é obrigatório!
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card-footer">
-      <div class="d-flex">
-        <button class="btn btn-outline-secondary mr-auto border">
-          Cancelar Alteração
-        </button>
-        <button class="btn btn-success">
-          <!-- <span class="spinner-border spinner-border-sm mr-1"></span> -->
-          Salvar Evento
-        </button>
+      <div class="card-footer">
+        <div class="d-flex">
+          <button class="btn btn-outline-secondary mr-auto border">
+            Cancelar Alteração
+          </button>
+          <button class="btn btn-success">
+            <!-- <span class="spinner-border spinner-border-sm mr-1"></span> -->
+            Salvar Evento
+          </button>
+        </div>
       </div>
     </div>
   </form>
